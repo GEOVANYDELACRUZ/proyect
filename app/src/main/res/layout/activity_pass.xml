@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#7B64FD"
+    tools:context=".ui.editar.pass"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/txteditpass"
+        android:fontFamily="sans-serif"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp">
+        <ImageView
+            android:id="@+id/imageview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/profile_picture"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:layout_weight="2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp">
+            <TextView
+                android:id="@+id/txt_changepass_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de usuario"
+                android:drawableLeft="@drawable/ic_users"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/txt_changepass_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg3"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="@string/txtchangepass1"
+                android:layout_marginVertical="20dp"
+                app:counterMaxLength="15"
+                app:counterEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtchangepass1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txtchangepass1"
+                    android:cursorVisible="true"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    ></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="@string/txtchangepass2"
+                android:layout_marginBottom="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="15">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtchangepass2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txtchangepass2"
+                    android:cursorVisible="true"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    ></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtSegPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/error_segPass1"
+                android:textSize="15dp"
+                android:textColorHint="@color/red2"
+                android:visibility="gone"/>
+            <CheckBox
+                android:id="@+id/checkBoxShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            >
+            <Button
+                android:id="@+id/button_changepass_cancel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/efredbuttonsv2"
+                android:text="@string/btnchangepass_cancel"
+                android:textSize="13dp" />
+            <Button
+                android:id="@+id/button_changepass_save"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/efredbuttons"
+                android:text="@string/btnchangepass_save"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

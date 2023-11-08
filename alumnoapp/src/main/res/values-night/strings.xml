@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtSplash"><u>Terminos de Política y Privacidad</u></string>
+    <string name="ISBienvenida">Bienvenido a College Grades</string>
+    <string name="ISUsuario">Ingrese su usuario</string>
+    <string name="ISContrasena">Ingrese su contraseña</string>
+    <string name="ISedtContrasena">Contraseña</string>
+    <string name="ISbtn">Iniciar Sesión</string>
+    <string name="N1txtVisualizarNot">Ver notas por cursos</string>
+    <string name="N1txtSeleccCurso">Seleccionar notas</string>
+    <string name="N1txtNotas">Notas</string>
+    <string name="N2txtPreferencias">Preferencias</string>
+    <string name="N2txtSeleccionarTema">Seleccionar tema</string>
+    <string name="N2txtSeleccionarIdioma">Seleccionar idioma</string>
+    <string name="N2txtSeleccionarTamaL">Seleccionar tamaño de letra</string>
+    <string name="N2btnGuardarCambios">Guardar cambios</string>
+</resources>

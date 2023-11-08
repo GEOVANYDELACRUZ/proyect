@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_CargarListaEstudiantes">
+
+    <fragment
+        android:id="@+id/nav_CargarListaEstudiantes"
+        android:name="delacruz.examenfinal.proyectofinal.ui.cargarlista.CargarLista"
+        android:label="@string/menu_CargarLista"
+        tools:layout="@layout/fragment_cargarlista" />
+
+    <fragment
+        android:id="@+id/nav_AsignarNotas"
+        android:name="delacruz.examenfinal.proyectofinal.ui.asignarnota.AsignarNotas"
+        android:label="@string/menu_AsignarNotas"
+        tools:layout="@layout/fragment_asignarnotas" />
+
+    <fragment
+        android:id="@+id/nav_Consolidado"
+        android:name="delacruz.examenfinal.proyectofinal.ui.consolidado.Consolidado"
+        android:label="@string/menu_Consolidado"
+        tools:layout="@layout/fragment_consolidado" />
+    <fragment
+        android:id="@+id/nav_Configuraciones"
+        android:name="delacruz.examenfinal.proyectofinal.ui.configuraciones.Configuraciones"
+        android:label="@string/menu_Configuraciones"
+        tools:layout="@layout/configuraciones_fragment" />
+    <fragment
+        android:id="@+id/nav_Salir"
+        android:name="delacruz.examenfinal.proyectofinal.ui.Salir"
+        android:label="@string/menu_Salir"
+        tools:layout="@layout/fragment_salir" />
+</navigation>

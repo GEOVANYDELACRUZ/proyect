@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_CargarListaEstudiantes"
+            android:icon="@drawable/ic_cargarlista"
+            android:title="@string/menu_CargarLista" />
+        <item
+            android:id="@+id/nav_AsignarNotas"
+            android:icon="@drawable/ic_asignarnota"
+            android:title="@string/menu_AsignarNotas" />
+        <item
+            android:id="@+id/nav_Consolidado"
+            android:icon="@drawable/ic_consolidado"
+            android:title="@string/menu_Consolidado" />
+        <item
+            android:id="@+id/nav_Configuraciones"
+            android:icon="@drawable/ic_configuraciones"
+            android:title="@string/menu_Configuraciones" />
+        <item
+            android:id="@+id/nav_Salir"
+            android:icon="@drawable/ic_salir"
+            android:title="@string/menu_Salir" />
+    </group>
+</menu>

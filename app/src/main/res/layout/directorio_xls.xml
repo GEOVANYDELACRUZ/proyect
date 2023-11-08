@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        >
+
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpDirectory"
+            android:text="@string/DgUpDirectorios"/>
+
+        <Button
+            android:id="@+id/btnViewSDCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="127dp"
+            android:text="@string/DgDirectorio" />
+
+        <Button
+            android:id="@+id/btnReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:text="@string/DgSalir" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_below="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvInternalStorage"></ListView>
+
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">College Grades Profesor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">COLLEGE GRADES</string>
+    <string name="nav_header_subtitle">Menú Profesores</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_CargarLista">Cargar Lista de Estudiantes</string>
+    <string name="menu_AsignarNotas">Asignar Notas de Estudiantes</string>
+    <string name="menu_Consolidado">Consolidado</string>
+    <string name="menu_Configuraciones">Configuraciones</string>
+    <string name="menu_Salir">Salir</string>
+
+    <!-- Splash  -->
+    <string name="txtSplash"><u>Terminos de Política y Privacidad</u></string>
+
+    <!-- Iniciar Sesion  -->
+    <string name="ISBienvenida">Bienvenido a College Grades</string>
+    <string name="ISCorreo">Ingrese su Correo</string>
+    <string name="ISedtCorreo">Correo</string>
+    <string name="ISContrasena">Ingrese su Contraseña</string>
+    <string name="ISedtContrasena">Contraseña</string>
+    <string name="ISbtn">Iniciar Sesión</string>
+    <string name="IStxtregis"><u>Registrarse</u></string>
+
+    <!-- Registrar  -->
+    <string name="RGBienvenida"><u>Registro de Profesores</u></string>
+    <string name="RGtxtNombres">Ingrese sus nombres</string>
+    <string name="RGedtNombres">Nombres</string>
+    <string name="RGtxtApellidos">Ingrese sus Apellidos</string>
+    <string name="RGedtApellidos">Apellidos</string>
+    <string name="RGtxtCorreo">Ingrese un correo</string>
+    <string name="RGedtCorreo">Correo</string>
+    <string name="RGtxtContrasena">Ingrese una contraseña</string>
+    <string name="RGedtContrasena">Contraseña</string>
+    <string name="RGbtn">Registrar</string>
+    <string name="RGtxtcancelar"><u>Cancelar</u></string>
+    <!-- N1 Cargar Lista de Estudiantes  -->
+    <string name="N1btnCargarLista">Cargar Lista</string>
+    <string name="N1txtListaCargada">Lista de alumnos cargada</string>
+    <string name="N1txtSeleCurso">Selecciona el notas</string>
+    <string name="N1txtIngresarCurso">Ingresar curso</string>
+    <string name="N1txtIngresarNotas">Ingresar notas</string>
+    <string name="N1edtIngresarCurso">Curso</string>
+    <string name="N1btnGuardarLista">Guardar Lista</string>
+    <string-array name="Alumnos">
+        <item>Alumno 1</item>
+        <item>Alumno 2</item>
+        <item>Alumno 3</item>
+        <item>Alumno 4</item>
+        <item>Alumno 5</item>
+        <item>Alumno 6</item>
+        <item>Alumno 7</item>
+        <item>Alumno 8</item>
+        <item>Alumno 9</item>
+        <item>Alumno 10</item>
+    </string-array>
+    <!-- N2 Asignar notas de Estudiantes  -->
+    <string-array name="Cursos">
+        <item>Curso 1</item>
+        <item>Curso 2</item>
+        <item>Curso 3</item>
+        <item>Curso 4</item>
+        <item>Curso 5</item>
+        <item>Curso 6</item>
+        <item>Curso 7</item>
+        <item>Curso 8</item>
+        <item>Curso 9</item>
+        <item>Curso 10</item>
+    </string-array>
+    <string name="N2txtListaCursos">Selecciona Curso</string>
+    <string name="N2txtCriterio">Ingresa Criterio</string>
+    <string name="N2edtIngresarCriterio">Criterio de calificación</string>
+    <string name="N2btnPonerNotas">Ir a Calificar</string>
+
+    <string name="N2txtListaAlumnos">Lista de Alumnos</string>
+    <string name="N2txtAsignarNotas">Asignar Notas</string>
+    <string name="N2txtNotas">Ingresa una nota</string>
+    <string name="N2edtIngresarNotas">Nota</string>
+    <string name="N2txtDescripcion">Ingresa una descripción</string>
+    <string name="N2edtIngresarDescripcion">Descripción</string>
+
+    <string name="N2btnCalificar">Listo</string>
+    <string name="N2btnSalir">Salir</string>
+    <!-- N3 Consolidado  -->
+    <string name="N3txtConsolidado">Consolidado de Notas</string>
+    <string name="N3txtSeleccionarCurso">Seleccionar notas</string>
+    <string name="N3txtNumEstudiantes">Número de Estudiantes </string>
+
+    <string name="N3btnExportar">Exportar</string>
+
+    <!-- N4 Configuraciones  -->
+    <string name="N4txtPreferencias">Preferencias</string>
+    <string name="N4txtSeleccionarTema">Seleccionar tema</string>
+    <string-array name="Tema">
+        <item>Claro</item>
+        <item>Oscuro</item>
+    </string-array>
+    <string name="N4txtSeleccionarIdioma">Seleccionar idioma</string>
+    <string-array name="Idioma">
+        <item>Español</item>
+        <item>Ingles</item>
+    </string-array>
+    <string name="N4txtSeleccionarTamaL">Seleccionar tamaño de fuente</string>
+    <string-array name="TamaLetra">
+        <item>20</item>
+        <item>18</item>
+        <item>16</item>
+        <item>14</item>
+        <item>12</item>
+    </string-array>
+    <string name="N4btnGuardarCambios">Guardar Cambios</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="DgDirectorio">Directorios</string>
+    <string name="DgUpDirectorios">Regresar</string>
+    <string name="DgSalir">Salir</string>
+    <string name="btneditacc_cancel">Cancelar</string>
+    <string name="btneditacc_save">Guardar</string>
+    <string name="txteditacc">Editar Perfil 👨</string>
+    <string name="txteditaccnames">Ingresa tus nombres</string>
+    <string name="txteditacclastname">Ingresa tus apellidos</string>
+    <string name="txt_restablecer_pwd">RESTABLECE TU CONTRASEÑA 🔒</string>
+    <string name="txt_comentario_pwd">Ingresa tu correo electronico para reestabler contraseña</string>
+    <string name="txt_correo_electronico">Correo electronico</string>
+    <string name="txt_restablecer">Enviar</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txteditpass">CAMBIAR CONTRASEÑA 🔑</string>
+    <string name="txtchangepass1">Ingresa tu nueva contraseña</string>
+    <string name="txtchangepass2">Comfirma tu contraseña</string>
+    <string name="error_segPass1">La contraseña debe ser más segura, mi pan con mi vomo</string>
+    <string name="btnchangepass_save">GUARDAR</string>
+    <string name="btnchangepass_cancel">CANCELAR</string>
+    <string name="IStxtpass"><u>Recuperar contraseña</u></string>
+    <string name="txtEditPerfil">Editar Perfil</string>
+    <string name="txtEditPerfilDes">Edite sus datos personales</string>
+    <string name="txtChangPass">Cambia tu contraseña</string>
+    <string name="txtChangPassDes">Cambia tu contraseña por defecto por una más segura</string>
+    <string name="seraching">Cargando...</string>
+    <string name="question_ActUser">¿Desea actualizar los datos?</string>
+    <string name="question_Yes">Si</string>
+    <string name="question_No">No</string>
+    <string name="load_Register">Cargando...</string>
+    <string name="error_General">ERROR: No se pudo cargar la base de datos...</string>
+    <string name="error_msj3">No se pudo actualizar</string>
+    <string name="msj1">Datos actualizados correctamente...</string>
+    <string name="error_Null">Rellene todos los campos requeridos...</string>
+    <string name="error_Pass">Las contraseñas son distintas...</string>
+
+
+</resources>

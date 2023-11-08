@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Colege Grades Alumno</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">COLLEGE GRADES</string>
+    <string name="nav_header_subtitle">Alumno</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_visualizarnotas">Visualizar Notas</string>
+    <string name="menu_configuraciones">Configuraciones</string>
+    <string name="menu_salir">Salir</string>
+
+    <!-- Splash  -->
+    <string name="txtSplash"><u>Terminos de Política y Privacidad</u></string>
+    <!-- Iniciar Sesion  -->
+    <string name="ISBienvenida">Bienvenido a College Grades</string>
+    <string name="ISUsuario">Ingrese su usuario</string>
+    <string name="ISedtUsuario">Usuario</string>
+    <string name="ISContrasena">Ingrese su contraseña</string>
+    <string name="ISedtContrasena">Contraseña</string>
+    <string name="ISbtn">Iniciar Sesión</string>
+    <!-- Visualizar Notas  -->
+    <string name="N1txtVisualizarNot">Ver notas por cursos</string>
+    <string name="N1txtSeleccCurso">Seleccionar notas</string>
+    <string name="N1txtNotas">Notas</string>
+    <string-array name="Cursos">
+        <item>Curso 1</item>
+        <item>Curso 2</item>
+        <item>Curso 3</item>
+        <item>Curso 4</item>
+        <item>Curso 5</item>
+        <item>Curso 6</item>
+        <item>Curso 7</item>
+        <item>Curso 8</item>
+        <item>Curso 9</item>
+        <item>Curso 10</item>
+    </string-array>
+    <!-- Configuraciones  -->
+    <string name="N2txtPreferencias">Preferencias</string>
+    <string name="N2txtSeleccionarTema">Seleccionar tema</string>
+    <string-array name="Tema">
+    <item>Claro</item>
+    <item>Oscuro</item>
+    </string-array>
+    <string name="N2txtSeleccionarIdioma">Seleccionar idioma</string>
+    <string-array name="Idioma">
+        <item>Español</item>
+        <item>Ingles</item>
+    </string-array>
+    <string name="N2txtSeleccionarTamaL">Seleccionar tamaño de letra</string>
+    <string name="N2btnGuardarCambios">Guardar cambios</string>
+    <string-array name="TamaLetra">
+        <item>20</item>
+        <item>18</item>
+        <item>16</item>
+        <item>14</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="ListNotas">
+        <item>1  -  Nota1  -  Descripcion1</item>
+        <item>2  -  Nota2  -  Descripcion2</item>
+        <item>3  -  Nota3  -  Descripcion3</item>
+        <item>4  -  Nota4  -  Descripcion4</item>
+        <item>5  -  Nota5  -  Descripcion5</item>
+        <item>6  -  Nota6  -  Descripcion6</item>
+    </string-array>
+</resources>
