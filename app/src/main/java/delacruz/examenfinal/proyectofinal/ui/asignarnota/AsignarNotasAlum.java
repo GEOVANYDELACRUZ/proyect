@@ -172,6 +172,7 @@ public class AsignarNotasAlum extends AppCompatActivity {
                         alumnos = new Alumnos();
                         JSONObject jsonObject=null;
                         jsonObject = json.getJSONObject(i);
+                        alumnos.setPos(i+1);
                         alumnos.setCodAlumno(jsonObject.getString("DNI"));
                         alumnos.setAlumNombres(jsonObject.getString("alumNombres"));
                         alumnos.setAlumApPaterno(jsonObject.getString("alumAPaterno"));

@@ -1,6 +1,7 @@
 package delacruz.examenfinal.proyectofinal.Entidad;
 
 public class Alumnos {
+    private Integer pos;
     private String CodAlumno;
     private String alumApPaterno;
     private String alumApMaterno;
@@ -9,11 +10,20 @@ public class Alumnos {
     public Alumnos() {
     }
 
-    public Alumnos(String codAlumno, String alumApPaterno, String alumApMaterno, String alumNombres) {
-        this.CodAlumno = codAlumno;
+    public Alumnos(Integer pos, String codAlumno, String alumApPaterno, String alumApMaterno, String alumNombres) {
+        this.pos = pos;
+        CodAlumno = codAlumno;
         this.alumApPaterno = alumApPaterno;
         this.alumApMaterno = alumApMaterno;
         this.alumNombres = alumNombres;
+    }
+
+    public Integer getPos() {
+        return pos;
+    }
+
+    public void setPos(Integer pos) {
+        this.pos = pos;
     }
 
     public String getCodAlumno() {
@@ -50,5 +60,5 @@ public class Alumnos {
 
     @Override
     public String toString() {
-        return  CodAlumno+": "+alumApPaterno+", "+alumNombres;}
+        return  "("+pos+") "+CodAlumno+": "+alumApPaterno+", "+alumNombres;}
 }

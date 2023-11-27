@@ -197,7 +197,7 @@ public class CargarLista extends Fragment {
                 }else{
                     pathHistory.remove(count);
                     count--;
-                    checkInternalStorage();
+                    checkInternalStorage(dialog);
                     Log.d(TAG, "btnUpDirectory: " + pathHistory.get(count));
                 }
             }
@@ -209,7 +209,7 @@ public class CargarLista extends Fragment {
                 pathHistory = new ArrayList<String>();
                 pathHistory.add(count,System.getenv("EXTERNAL_STORAGE"));
                 Log.d(TAG, "btnSDCard: " + pathHistory.get(count));
-                checkInternalStorage();
+                checkInternalStorage(dialog);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, FilePathStrings);
                 lvInternalStorage.setAdapter(adapter);
             }
@@ -222,13 +222,13 @@ public class CargarLista extends Fragment {
                     Log.d(TAG, "lvInternalStorage: Selected a file for upload: " + lastDirectory);
 
                     //Execute method for reading the excel data.
-                    readExcelData(lastDirectory);
+                    readExcelData(lastDirectory, dialog);
 
                 }else
                 {
                     count++;
                     pathHistory.add(count,(String) adapterView.getItemAtPosition(i));
-                    checkInternalStorage();
+                    checkInternalStorage(dialog);
                     Log.d(TAG, "lvInternalStorage: " + pathHistory.get(count));
                 }
             }
@@ -243,7 +243,7 @@ public class CargarLista extends Fragment {
 
     }
 
-    private void checkInternalStorage() {
+    private void checkInternalStorage(Dialog dialog) {
 
         Log.d(TAG, "checkInternalStorage: Started.");
         try{
@@ -276,7 +276,8 @@ public class CargarLista extends Fragment {
             {
                 Log.d("Files", "FileName:" + listFile[i].getName());
             }
-            Toast.makeText(getContext(), "Los datos fueron cargados\nPuede cerrar esta pantalla", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), "Los datos fueron cargados\nPuede cerrar esta pantalla", Toast.LENGTH_SHORT).show();
+//            dialog.dismiss();
 
 
         }catch(NullPointerException e){
@@ -285,7 +286,7 @@ public class CargarLista extends Fragment {
         }
     }
 
-    private void readExcelData(String filePath) {
+    private void readExcelData(String filePath,Dialog dialog) {
         Log.d(TAG, "readExcelData: Reading Excel File.");
 
         //decarle input file
@@ -312,16 +313,16 @@ public class CargarLista extends Fragment {
                         break;
                     }else{
                         String value = getCellAsString(row, c, formulaEvaluator);
-                        String cellInfo = "r:" + r + "; c:" + c + "; v:" + value;
-                        Log.d(TAG, "readExcelData: Data from row: " + cellInfo);
+//                        String cellInfo = "r:" + r + "; c:" + c + "; v:" + value;
+//                        Log.d(TAG, "readExcelData: Data from row: " + cellInfo);
                         sb.append(value + ", ");
                     }
                 }
                 sb.append(":");
             }
-            Log.d(TAG, "readExcelData: STRINGBUILDER: " + sb.toString());
+//            Log.d(TAG, "readExcelData: STRINGBUILDER: " + sb.toString());
 
-            parseStringBuilder(sb,rowsCount);
+            parseStringBuilder(sb,rowsCount,dialog);
 
         }catch (FileNotFoundException e) {
             Log.e(TAG, "readExcelData: FileNotFoundException. " + e.getMessage() );
@@ -330,7 +331,7 @@ public class CargarLista extends Fragment {
         }
     }
 
-    public void parseStringBuilder(StringBuilder mStringBuilder,int aux){
+    public void parseStringBuilder(StringBuilder mStringBuilder,int aux, Dialog dialog){
         Log.d(TAG, "parseStringBuilder: Started parsing.");
 
         // splits the sb into rows.
@@ -348,15 +349,20 @@ public class CargarLista extends Fragment {
                     String y = (columns[1]);
                     String a = (columns[2]);
                     String b = (columns[3]);
-                    String cellInfo = "(x,y): (" + x + "," + y + "," + a + "," + b  + ")";
-                    Log.d(TAG, "ParseStringBuilder: Data from row PRUEBA: " + cellInfo);
+//                    String cellInfo = "(x,y): (" + x + "," + y + "," + a + "," + b  + ")";
+//                    Log.d(TAG, "ParseStringBuilder: Data from row PRUEBA: " + cellInfo);
 
                     //add the the uploadData ArrayList
 //                    Dialog dialog
-                    alumnosArrayList.add(new Alumnos(x, a, b,y));
+                    alumnosArrayList.add(new Alumnos(i+1,x, a, b,y));
+
 //                }
 
                 lstAlumnos.setAdapter(new ArrayAdapter<Alumnos>(getContext(), android.R.layout.simple_list_item_1, alumnosArrayList));
+                dialog.dismiss();
+//                Toast.makeText(getContext(), "Los alumnos se estan cargando...", Toast.LENGTH_SHORT).show();
+
+
             }catch (NumberFormatException e){
 
                 Log.e(TAG, "parseStringBuilder: NumberFormatException: " + e.getMessage());
@@ -377,8 +383,8 @@ public class CargarLista extends Fragment {
             String y = alumnosArrayList.get(i).getAlumNombres();
             String a = alumnosArrayList.get(i).getAlumApPaterno();
             String b = alumnosArrayList.get(i).getAlumApMaterno();
-            Log.d(TAG, "printDataToLog: (x,y): (" + x + "," + y + "," + a + "," + b+")");
-            Log.i("TT","Ingreso ALUMNOS");
+//            Log.d(TAG, "printDataToLog: (x,y): (" + x + "," + y + "," + a + "," + b+")");
+//            Log.i("TT","Ingreso ALUMNO - " + i );
             registrarAlumno(x,y,a,b);
         }
     }
@@ -525,7 +531,7 @@ public class CargarLista extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progreso.hide();
-                Log.i("TT","ERROR AL INGRESAR ALUMNO/CURSO: "+error);
+                Log.e("TT","ERROR AL INGRESAR ALUMNO/CURSO "+x+": "+error);
 
             }
         });
@@ -548,14 +554,14 @@ public class CargarLista extends Fragment {
             @Override
             public void onResponse(JSONObject response) {
                 progreso.hide();
-                Toast.makeText(getContext(), "Los alumnos fueron cargados", Toast.LENGTH_SHORT).show();
-                Log.i("TT","INGRESO CORRECTO : "+response);
+                Toast.makeText(getContext(), "El alumno fue cargados", Toast.LENGTH_SHORT).show();
+                Log.i("TI","INGRESO CORRECTO : "+response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progreso.hide();
-                Log.i("TT","ERROR AL INGRESAR: "+error);
+                Log.e("TT","ERROR AL INGRESAR: "+error);
 
             }
         });
